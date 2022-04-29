@@ -19,12 +19,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install
+          npm install fs fs/promises
+          electron-builder -w
 
-      - name: Build/release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
-        with:
-          github_token: ${{ secrets.github_token }}
+      #- name: Build/release Electron app
+      #  uses: samuelmeuli/action-electron-builder@v1
+      #  with:
+      #    github_token: ${{ secrets.github_token }}
 
       - name: "Create Release"
         uses: "marvinpinto/action-automatic-releases@latest"
