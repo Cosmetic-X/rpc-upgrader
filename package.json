@@ -1,0 +1,72 @@
+{
+  "name": "rpc-upgrader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "build": {
+    "appId": "de.cosmetic-x.client",
+    "productName": "Cosmetic-X Client",
+    "artifactName": "${productName}.${ext}",
+    "copyright": "Copyright © Jan Sohn.\nAll rights reserved.\nI don't want anyone to use my software without my explicit permission.",
+    "directories": {
+      "output": "out"
+    },
+    "files": [
+      "./package.json",
+      "./resources/**",
+      "./src/**",
+      "./index.js",
+      "./LICENSE",
+      "!**/node_modules/**/{demo,build,deps,doc,docs,samples,benchmark,scss}/**/*",
+      "**/node_modules/**/build/Release/*.node",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
+    ],
+    "win": {
+      "publisherName": "Jan Sohn",
+      "icon": "./resources/images/logo.png",
+      "target": "portable"
+    },
+    "linux": {
+      "icon": "./resources/images/logo.png",
+      "target": "AppImage"
+    },
+    "mac": {
+      "icon": "./resources/images/logo.png",
+      "target": "dmg"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cosmetic-X/rpc-upgrader.git"
+  },
+  "author": "xxAROX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cosmetic-X/rpc-upgrader/issues"
+  },
+  "homepage": "https://github.com/Cosmetic-X/rpc-upgrader#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "axios": "^0.27.2",
+    "appdata-path": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^18.2.0",
+    "electron-builder": "^22.14.13"
+  }
+}

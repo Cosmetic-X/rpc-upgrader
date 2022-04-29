@@ -1,0 +1,17 @@
+{
+	"debug_mode": false,
+	"cosmetic-x": {
+		"rpc": {
+			"host": "45.142.115.211",
+			"port": 20058
+		},
+		"backend": {
+			"host": "https://cosmetic-x.de/api",
+			"port": 20059
+		}
+	},
+	"discord": {
+		"application_id": "919154150179209276",
+		"application_secret": "eIU-uxiZmz27hHldOjFKz-AEIVGbzRuU"
+	}
+}
